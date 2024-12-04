@@ -12,14 +12,31 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+$primary-700: #d25e2c;
+$primary-500: #ea6b34; // primary e orange bg-orange text-orange
+$primary-300: #f39255;
+$primary-50: #f7eae8;
 
-$dark      : #1D1D1D;
-$dark-page : #121212;
+$secondary-700: #4f5c6c;
+$secondary-500: #6d7f95; // $neutral-500 bg-neutral-500 text-neutral-500
+$secondary-400: #8392a5; // $cinzaAzul bg-cinza-azul text-cinza-azul text-blue-gray bg-blue-gray
+$secondary-200: #f1f4f6;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$tertiary: #bccfe7; // azulClaro text-light-blue bg-light-blue
+$chart-blue-2: #a9c9e5;
+$chart-blue-1: #2b73a8;
+
+$neutral-900: #333333; // preto
+$neutral-700: #616161; //cinza3 text-gray-3 bg-gray-3
+$neutral-500: #9e9e9e; // black500, $cinza1 text-gray-1 bg-gray-1 text-black-500 bg-black-500
+$neutral-300: #dcdcdc; //neutral-100  bg-neutral-100  text-neutral-100
+$neutral-200: #eeeeee; //brancoGelo, cinza2 text-gray-2 bg-gray-2 text-white-ice bg-white-ice
+$neutral-25: #fcfcfc;
+$neutral-50: #f8f8f8;
+$neutral-0: #ffffff; //branco
+
+$success: #1aa97e; //positive
+$standby: #3581fa;
+$warning-bg: #e2b044; //warning
+$warning-text: #b1740c;
+$danger: #c04e4c; //cancel, negative

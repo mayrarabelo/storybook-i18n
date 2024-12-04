@@ -1,15 +1,15 @@
 <template>
   <button type="button" :class="classes" @click="onClick" :style="style">
-    {{ t(label) }}
+    {{ label }}
   </button>
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n';
+// import { useI18n } from 'vue-i18n';
 import './button.css';
 import { computed } from 'vue';
 
-const { t } = useI18n();
+// const { t } = useI18n();
 
 const props = withDefaults(
   defineProps<{
