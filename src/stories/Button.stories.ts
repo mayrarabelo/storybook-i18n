@@ -20,18 +20,6 @@ const meta = {
   },
 } satisfies Meta<typeof Button>;
 
-const getCaptionForLocale = (locale: string) => {
-  switch (locale) {
-    case 'US':
-      return 'Hello!';
-    case 'pt-BR':
-      return 'Olá!';
-
-    default:
-      return 'Hello!';
-  }
-};
-
 export default meta;
 type Story = StoryObj<typeof meta>;
 /*
@@ -61,21 +49,9 @@ export const Large: Story = {
   },
 };
 
-// // TODO: terminar i18n
-// export const Small: Story = {
-//   args: {
-//     label: 'Button',
-//     size: 'small',
-//   },
-//   // globals: { locale },
-// };
-
-// export const Teste: Story = {
-//   render: (label: 'Button',
-//     size: 'small',, { globals: { locale } }) => {
-//     const caption = getCaptionForLocale(locale);
-//     return {
-//       template: `${caption}`,
-//     };
-//   },
-// };
+export const Small: Story = {
+  args: {
+    label: 'Button',
+    size: 'small',
+  },
+};

@@ -7,7 +7,6 @@ import '../src/css/app.scss';
 import '../src/css/quasar.variables.scss';
 import { i18n } from '../src/boot/i18n';
 
-// Registre o Quasar no contexto do Storybook
 setup((app) => {
   app.use(i18n);
   app.use(Quasar, {});

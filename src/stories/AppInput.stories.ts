@@ -32,15 +32,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Template = (args) => ({
-  components: { InputComponent },
-  setup() {
-    return { args };
-  },
-  template: '<app-input v-bind="args" />',
-});
-export const Default = Template.bind({});
-
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
  * See https://storybook.js.org/docs/api/csf
@@ -48,7 +39,8 @@ export const Default = Template.bind({});
  */
 export const titleI18n: Story = {
   args: {
-    titleI18n: 'Texto',
+    // TODO: usando o i18n
+    titleI18n: 'titleI18n',
   },
 };
 

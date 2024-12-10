@@ -1,7 +1,7 @@
 <template>
   <div id="app-input">
     <label class="rp-label type-body1 text-secondary-700" v-if="titleI18n">
-      {{ titleI18n }}
+      {{ t(titleI18n) }}
     </label>
     <span
       class="required_field"
@@ -20,7 +20,9 @@
       :filled="props.disable"
       :outlined="!props.disable"
       :label="props.labelI18n ? props.labelI18n : undefined"
-      :placeholder="props.placeholderI18n ? props.placeholderI18n : undefined"
+      :placeholder="
+        props.placeholderI18n ? t(props.placeholderI18n) : undefined
+      "
       :mask="props.mask"
       @input="inputValueChange"
       :rules="myRules"
@@ -58,7 +60,7 @@
 
 <script setup lang="ts">
 import { defineComponent, onMounted, PropType, ref, watch } from 'vue';
-// import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n';
 // import EventBus from 'src/EventBus';
 import { ValidationRule } from 'quasar';
 // import { hasOnlySpaces } from 'src/utils/validations';
@@ -94,7 +96,7 @@ const props = withDefaults(defineProps<InputProps>(), {
 });
 
 // const eventBus = new EventBus();
-// const { t } = useI18n();
+const { t } = useI18n();
 
 const inputValue = defineModel<string>();
 const inputValueRef = ref();
