@@ -31,6 +31,16 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const Template = (args) => ({
+  components: { InputComponent },
+  setup() {
+    return { args };
+  },
+  template: '<app-input v-bind="args" />',
+});
+export const Default = Template.bind({});
+
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
  * See https://storybook.js.org/docs/api/csf
@@ -42,23 +52,23 @@ export const titleI18n: Story = {
   },
 };
 
-export const Textinhoinho: Story = {
-  args: {
-    primary: false,
-    label: 'Button',
-  },
-};
+// export const Textinhoinho: Story = {
+//   args: {
+//     primary: false,
+//     label: 'Button',
+//   },
+// };
 
-export const Large: Story = {
-  args: {
-    label: 'Button',
-    size: 'large',
-  },
-};
+// export const Large: Story = {
+//   args: {
+//     label: 'Button',
+//     size: 'large',
+//   },
+// };
 
-export const Small: Story = {
-  args: {
-    label: 'Button',
-    size: 'small',
-  },
-};
+// export const Small: Story = {
+//   args: {
+//     label: 'Button',
+//     size: 'small',
+//   },
+// };

@@ -5,50 +5,47 @@ import 'quasar/dist/quasar.css'; // Estilos do Quasar
 import '@quasar/extras/material-icons/material-icons.css'; // Ícones (se necessário)
 import '../src/css/app.scss';
 import '../src/css/quasar.variables.scss';
-
-// const decorator = (story, context) => {
-//   const { locale } = context.globals;
-//   i18n.global.locale.value = locale;
-//   return story();
-// };
+import { i18n } from '../src/boot/i18n';
 
 // Registre o Quasar no contexto do Storybook
 setup((app) => {
-  app.use(Quasar, {
-    // Configure aqui plugins ou outras opções globais do Quasar
-    config: {
-      brand: {
-        primary: '#1976d2', // Exemplo de configuração de tema
-        secondary: '#26a69a',
-      },
-    },
-  });
+  app.use(i18n);
+  app.use(Quasar, {});
 });
 
+const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    toolbar: {
+      icon: 'globe',
+      items: [
+        { value: 'en-US', title: 'English' },
+        { value: 'pt-BR', title: 'Portuguese' },
+      ],
+      showName: true,
+    },
+  },
+};
+
+const decorator = (story, context) => {
+  const { locale } = context.globals;
+  i18n.global.locale.value = locale;
+  return story();
+};
+
 const preview: Preview = {
+  globalTypes,
+  decorators: [decorator],
   parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i,
+        date: /Date$/,
       },
     },
   },
-  globalTypes: {
-    locale: {
-      name: 'Locale',
-      description: 'Internationalization locale',
-      toolbar: {
-        icon: 'globe',
-        items: [
-          { value: 'en-US', title: 'English' },
-          { value: 'pt-BR', title: 'Portuguese' },
-        ],
-        showName: true,
-      },
-    },
-  },
-  // decorators: [decorator],
 };
 
 export default preview;

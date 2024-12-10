@@ -85,9 +85,9 @@ module.exports = configure(function (/* ctx */) {
             vueTsc: {
               tsconfigPath: 'tsconfig.vue-tsc.json',
             },
-            eslint: {
-              lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
-            },
+            // eslint: {
+            //   lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
+            // },
           },
           { server: false },
         ],

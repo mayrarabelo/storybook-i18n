@@ -96,7 +96,7 @@ const props = withDefaults(defineProps<InputProps>(), {
 // const eventBus = new EventBus();
 // const { t } = useI18n();
 
-const inputValue = defineModel();
+const inputValue = defineModel<string>();
 const inputValueRef = ref();
 const myRules = ref<ValidationRule[]>([]);
 const currentyMadatoryValue = ref();
