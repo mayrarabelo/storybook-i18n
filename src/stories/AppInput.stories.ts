@@ -5,7 +5,7 @@ import AppInput from './../components/AppInput.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Example/AppInput',
+  title: 'Inputs/AppInput',
   component: AppInput,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

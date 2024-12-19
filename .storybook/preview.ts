@@ -6,10 +6,15 @@ import '@quasar/extras/material-icons/material-icons.css'; // Ícones (se necess
 import '../src/css/app.scss';
 import '../src/css/quasar.variables.scss';
 import { i18n } from '../src/boot/i18n';
+import { Dialog } from 'quasar';
 
 setup((app) => {
   app.use(i18n);
-  app.use(Quasar, {});
+  app.use(Quasar, {
+    plugins: {
+      Dialog,
+    },
+  });
 });
 
 const globalTypes = {

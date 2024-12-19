@@ -5,4 +5,7 @@ export default {
   failed: 'Ação falhou',
   success: 'Ação foi sucesso',
   button: 'Botão',
+  titleI18n: 'Teste Título',
+  confirm: 'Confirmar',
+  cancel: 'Cancelar',
 };
